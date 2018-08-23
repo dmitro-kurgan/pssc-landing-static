@@ -1,0 +1,113 @@
+section.projects#projects
+	.container
+		.main-title.wow.fadeIn
+			h2 Наши работы:
+		.projects__block
+			.projects__nav
+				ul.nav.nav-tabs
+					mixin li(link, name, className, delay)
+						li(class="wow fadeIn " + className, data-wow-delay= delay)
+							a(href="#project" + link, data-toggle='tab')= name
+					+li('1', 'Проект 1', 'active', '0.25s')
+					+li('2', 'Проект 2', '', '0.5s')
+					+li('3', 'Проект 3', '', '0.75s')
+					+li('4', 'Проект 4', '', '1s')
+			.projects__content.wow.fadeIn(data-wow-delay='0.25s')
+				.tab-content
+					mixin tabContent(name, className)
+						div(id="project" + name, class='tab-pane fade in ' + className)
+							ul.row
+								mixin slickFor(img)
+									div
+										.slick-for__box
+											.slick-for__img(style='background-image: url(' + require("./components/images/slide-" + img + '.jpg') + ')')
+								mixin slickNav(img)
+									div
+										.slick-nav__box
+											.slick-nav__img(style='background-image: url(' + require("./components/images/slide-" + img + '.jpg') +')')
+								mixin projectName(name)
+									.projects__info
+										.projects__name
+											p Заказчик:
+												span= name
+										.projects__info-block
+											.projects__list
+												ul
+													mixin li(text)
+														li= text
+													block
+								block
+					+tabContent('1', 'active')
+						li.col-sm-6
+							.slider.slick-for
+								+slickFor('2')
+								+slickFor('1')
+								+slickFor('3')
+							.slider.slick-nav
+								+slickNav('2')
+								+slickNav('1')
+								+slickNav('3')
+						li.col-sm-6
+							+projectName('ООО "С-Инвест".')
+								+li('Монтаж системы утепления для ограждающих конструкций на объекте по адресу: ул. Маршала Бажанова, г. Харьков.')
+								+li('Выполнение работ по теплоизоляции наружных стен, подвальных помещений, чердаков, кровель и фундаментов.')
+					+tabContent('2', '')
+						li.col-sm-6
+							.slider.slick-for
+								+slickFor('7')
+								+slickFor('7')
+								+slickFor('7')
+							.slider.slick-nav(style='display: none')
+								+slickNav('7')
+								+slickNav('7')
+								+slickNav('7')
+						li.col-sm-6
+							+projectName('ОАО "ГАК" Автомобильные дороги Украины "ДП" Харьковский облавтодор"')
+								+li('Ремонт кровли здания Облавтодора, по адресу: г. Харьков, ул. Асхарова, 2.')
+								+li('Выполнение работ по ремонту фасада и существующей кровли.')
+					+tabContent('3', '')
+						li.col-sm-6
+							.slider.slick-for
+								+slickFor('6')
+								+slickFor('4')
+								+slickFor('5')
+							.slider.slick-nav
+								+slickNav('6')
+								+slickNav('4')
+								+slickNav('5')
+						li.col-sm-6
+							+projectName('Жилищно-строительный кооператив "ЖСК-98".')
+								+li('Монтаж системы утепления для ограждающих конструкций площадью 3000 м2 на объекте, расположенном по адресу: пр. Московский, 128, г. Харьков.')
+								+li('Выполнение работ по теплоизоляции (термомодернизации) наружных стен, подвальных помещений, чердаков, кровель и фундаментов')
+					+tabContent('4', '')
+						li.col-sm-6
+							.slider.slick-for
+								+slickFor('8')
+								+slickFor('9')
+								+slickFor('10')
+							.slider.slick-nav
+								+slickNav('8')
+								+slickNav('9')
+								+slickNav('10')
+						li.col-sm-6
+							+projectName('Физическое лицо.')
+								+li('Строительство одноэтажного жилого дома по адресу: пер. Променистый, 18-А, г. Харьков.')
+								+li('Строительство одноэтажного жилого дома (под ключ). Земляные работы, устройство фундаментов, монтаж стен, устройство кровли, фасадные работы, благоустройство прилегающей територии, прокладка инженерных сетей.')
+//- .projects__square
+//- 	p
+//- 		| Площадь:
+//- 		span 100 м2
+//- .projects__duration
+//- 	p
+//- 		| Продолжительность работы:
+//- 		span 3 месяца
+//- .projects__list
+//- 	p Выполнение работы:
+//- 	ul
+//- 		mixin li
+//- 			li Монтаж системы утепления и ограждающех конструкций
+//- 		+li
+//- 		+li
+//- 		+li
+//- 		+li
+//- 		+li

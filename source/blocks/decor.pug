@@ -1,0 +1,26 @@
+section.decor#decor
+	.container
+		.decor__const
+			.main-title.wow.fadeIn
+				h2 Конструктив:
+			.decor__block
+				ul.row
+					mixin decorBox(img, name, delay)
+						li.col-sm-3.wow.flipInY(data-wow-delay= delay)
+							.decor__box
+								.decor__img(style="background-image: url(" + require('./components/images/decor-' + img + '.jpg') + ")")
+								.decor__name
+									p= name
+					+decorBox('1', 'Готовая поверхность', '0.25s')
+					+decorBox('2', 'Утеплитель', '0.5s')
+					+decorBox('3', 'Фасадная штукатурка', '0.75s')
+					+decorBox('4', 'Краска или декоративная штукатурка', '1s')
+		.decor__dec.wow.fadeIn
+			.main-title
+				h2 Декоративные покрытия фасада:
+			.decor__block
+				ul.row
+					+decorBox('5', 'Окраска', '0.25s')
+					+decorBox('6', 'Нанесение декоративной штукатурки', '0.5s')
+					+decorBox('7', 'Отделка камнем', '0.75s')
+					+decorBox('8', 'Отделка сайдингом', '1s')

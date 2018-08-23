@@ -1,0 +1,62 @@
+.advantage {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: #f4f4f4;
+	padding: 50px 0 75px 0;
+	@media #{$tablet} {
+		background-repeat: no-repeat;
+		background-position: 50% 100%;
+		background-size: 150%;
+	}
+	@media #{$mobile} {
+		background-image: none !important;
+	}
+	&__block {
+		max-width: 1000px;
+		margin: 80px auto 0px auto;
+		display: flex;
+		justify-content: space-between;
+		@media #{$mobile} {
+			display: block;
+			max-width: 280px;
+			margin: 40px auto 0px auto;
+			ul + ul {
+				margin-top: 30px;
+			}
+		}
+	}
+	&__box {
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+	&__img, &__text {
+		display: inline-block;
+	}
+	&__img {
+		width: 87px;
+		height: 87px;
+		line-height: 83px;
+		border-radius: 50%;
+		border: 2px solid #ff9a00;
+		text-align: center;
+		p, img {
+			vertical-align: middle;
+			display: inline-block;
+		}
+		p {
+			line-height: 1;
+			font-size: 27px;
+		}
+	}
+	&__text {
+		max-width: 175px;
+		margin: auto auto auto 10px;
+		p {
+			font-size: 16px;
+			font-weight: 700;
+		}
+	}
+}

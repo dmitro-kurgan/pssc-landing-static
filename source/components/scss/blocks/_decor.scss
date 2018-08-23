@@ -1,0 +1,60 @@
+.decor {
+	background-color: #f4f4f4;
+	&__block {
+		margin-bottom: 70px;
+		@media #{$mobile} {
+			li + li {
+				.decor__box {
+					margin-top: 50px;
+				}
+			}
+		}
+	}
+	.main-title {
+		margin: 10px 0 30px 0;
+		h2 {
+			background-color: #f4f4f4;
+		}
+	}
+	&__const {
+		padding-top: 35px;
+	}
+	&__box {
+		box-shadow: 0px 7px 12px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 5px;
+		@media #{$mobile} {
+			max-width: 240px;
+			margin: auto;
+		}
+	}
+	&__img {
+		min-height: 185px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		border-radius: 5px 5px 0px 0px;
+		@media #{$tablet} {
+			min-height: 155px;
+		}
+	}
+	&__name {
+		background-color: $main_color;
+		border-top: 6px solid #ff9a00;
+		min-height: 65px;
+		line-height: 65px;
+		text-align: center;
+		@media #{$tablet} {
+			min-height: 55px;
+			line-height: 55px;
+		}
+		p {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 17px;
+			line-height: 1;
+			@media #{$tablet} {
+				font-size: 14px;
+			}
+		}
+	}
+}

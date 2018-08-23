@@ -1,0 +1,21 @@
+section.partners#partners
+	.container
+		.main-title.wow.fadeIn
+			h2 Наши заказчики и партнеры:
+		.partners__block.wow.flipInX
+			.slider.slick-partners
+				mixin slidePartners(img)
+					div
+						.slick-partners__box
+							.slick-partners__img(style='background-image:url(' + require('./components/images/' + img + '.png') + ')')
+							//- img(scr=require('./components/images/' + img + '.png'), alt='' + img)
+				+slidePartners('ikea')
+				+slidePartners('mango')
+				+slidePartners('budman')
+				+slidePartners('nash')
+				+slidePartners('moyo')
+				+slidePartners('ikea')
+				+slidePartners('mango')
+				+slidePartners('budman')
+				+slidePartners('nash')
+				+slidePartners('moyo')

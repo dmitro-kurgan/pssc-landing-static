@@ -1,0 +1,25 @@
+extends ./templates/base
+
+block variables
+	- var classBody = 'index-page'
+	- var classWrapper = 'index'
+
+block title
+	title Фасадные работы - ПССК
+
+block main
+	include ./blocks/banner
+	include ./blocks/advantage
+	include ./blocks/contact-us
+	include ./blocks/decor
+	include ./blocks/services
+	include ./blocks/projects
+	include ./blocks/licenses
+	include ./blocks/partners
+	include ./blocks/map
+block script
+	script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+	script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/jquery.form-sender.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/intlTelInput.min.js')
+	script(type='text/javascript', src='./js/send.js')

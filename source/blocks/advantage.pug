@@ -1,0 +1,26 @@
+section.advantage#advantage(style='background-image: url(' + require("./components/images/background-3.jpg") + ')')
+	.container
+		.main-title.wow.fadeIn
+			h2 Наши преимущества:
+		.advantage__block
+			mixin advantageBox(img, alt, text, delay)
+					li.advantage__box.wow.flipInY(data-wow-delay= delay)
+						.advantage__img
+							img(src=require('./components/images/' + img + '.png'), alt= alt)
+						.advantage__text
+							p= text
+			mixin advantageBox2(num, text, delay)
+					li.advantage__box.wow.flipInY(data-wow-delay= delay)
+						.advantage__img
+							p= num
+						.advantage__text
+							p= text
+			ul
+				+advantageBox2('8' ,'Лет опыта работы', '0.25s')
+				+advantageBox2('250' ,'Выполненных проектов', '0.5s')
+			ul
+				+advantageBox2('100 %' ,'Качество выполнения работ', '0.75s')
+				+advantageBox2('500' ,'Количество довольных клиентов', '1s')
+				
+				
+

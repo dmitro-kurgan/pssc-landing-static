@@ -1,0 +1,35 @@
+footer
+	.footer#footer
+		.container
+			ul.row.footer__block
+				li.col-sm-4.footer__left
+					a(href="./").footer__logo
+						span.footer__logo-img
+						span.footer__logo-name
+						p.
+							первая слобожанская строительная компания
+					a(href="https://unitspace.top").footer__production
+						p Production by:
+						span
+				li.col-sm-4.footer__center
+					.footer__form
+						form#order-form3(data-title="Заявка на сайте", data-order-form)
+							h5 Остались вопросы?
+							p.
+								Напишите свой номер и мы Вам перезвоним!
+							.form-group
+								input.form-control#name3(type='text', name='name', placeholder='Имя', required='required', data-is-included='true', data-title='Имя')
+								input.form-control#tel3(type='text', name='tel', placeholder='Телефон', required='required', data-is-included='true', data-title='Телефон')
+							button(type='submit').btn Отправить
+				li.col-sm-4.footer__right
+					ul.footer__list
+						li
+							a(href="tel:+380504050910") +38 (050) 405-09-10
+						li г. Харьков, проспект Науки, 56
+						li Пн-Пт с 10.00 до 18.00
+			.footer__copyright
+				p
+					span#year
+					| Все права защищены
+a#back-to-top.back-to-top(href='#', role='button', title='', data-toggle='tooltip', data-placement='left')
+	i.arrow

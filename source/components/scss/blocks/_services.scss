@@ -1,0 +1,134 @@
+.services {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	&__overlay {
+		background-color: rgba(136, 136, 136, 0.84);
+	}
+	.main-title {
+		h2 {
+			background-color: transparent;
+			color: $main_color;
+			&:after, &:before {
+				background-color: $main_color;
+			}
+		}
+		p {
+			color: $main_color;
+			margin-top: 20px; 
+   			line-height: 1.25;
+	    	@media #{$mobile} {
+				font-size: 19px;
+			}
+	    }
+	}
+	&__block {
+		padding: 65px 0 155px 0;
+		@media #{$mobile} {
+			padding: 50px 0;
+		}
+		ul {
+			margin-top: 50px;
+			@media #{$mobile} {
+				margin-top: 0px;
+			}
+			li + li {
+				@media #{$tablet} {
+					margin-top: 60px;
+				}
+			}
+		}
+	}
+	&__box {
+		background-color: $main_color;
+		max-width: 330px;
+		margin: auto;
+		border-radius: 3px 3px 0px 0px;
+		@media #{$mobile} {
+			margin-top: 50px;
+		}
+	}
+	&__info {
+		padding: 10px 25px 20px 25px;
+		min-height: 615px;
+		@media #{$desctop} {
+			min-height: 680px;
+		}
+		@media #{$tablet} {
+			padding: 10px 20px;
+			min-height: initial;
+		}
+	}
+	&__name {
+		min-height: 70px;
+		line-height: 70px;
+		text-align: center;
+		border: 3px solid #ff9a00;
+		border-radius: 3px;
+		@media #{$tablet} {
+			min-height: 40px;
+			line-height: 40px;
+		}
+		h3 {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1;
+			font-size: 18px;
+			font-weight: 700;
+			text-transform: uppercase;
+			@media #{$tablet} {
+				font-size: 15px;
+			}
+		}
+	}
+	&__text {
+		// min-height: 215px;
+		// padding: 20px 25px;
+		text-align: center;
+		@media #{$tablet} {
+			// padding: 10px 20px;
+			// padding: 10px 20px;
+		}
+		@media #{$mobile} {
+			min-height: initial;
+		}
+		p {
+			// line-height: 1.6;
+			line-height: 1.25;
+			font-size: 15px;
+			font-weight: 700;
+			@media #{$desctop} {
+				font-size: 14px;
+			}
+			@media #{$tablet} {
+				font-size: 13px;
+			}
+		}
+	}
+	&__list {
+		// padding: 20px 25px;
+		ul {
+			margin-top: 10px;
+			li {
+				font-size: 14px;
+				line-height: 1.5;
+				text-indent: 20px;
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0px;
+					top: 7px;
+					border-radius: 50%;
+					background-color: #ff9a00;
+					width: 9px;
+					height: 9px;
+				}
+				& + li {
+					margin-top: 5px;
+					
+				}
+			}
+		}
+	}
+}

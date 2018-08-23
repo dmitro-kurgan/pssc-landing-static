@@ -1,0 +1,90 @@
+.licenses {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	.main-title {
+		h2 {
+			text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+			background-color: transparent;
+			color: $main_color;
+			&:after, &:before {
+				background-color: $main_color;
+			}
+		}
+	}
+	&__overlay {
+		background-color: rgba(136, 136, 136, 0.32);
+	}
+	&__block {
+		padding: 70px 0 100px 0;
+		@media #{$mobile} {
+			padding: 50px 0;
+		}
+		ul {
+			margin-top: 85px;
+			@media #{$mobile} {
+				margin: 0px;
+			}
+		}
+	}
+	&__box {
+		max-width: 270px;
+		margin: auto;
+		display: block;
+		position: relative;
+		padding: 27px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			right: 0px;
+			background-image: url(../images/border.png);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		@media #{$mobile} {
+			max-width: 220px;
+			margin: 50px auto auto auto;
+		}
+		&:hover {
+			.licenses {
+				&__overlay {
+					position: absolute;
+					top: 0px;
+					right: 0px;
+					left: 0px;
+					bottom: 0px;
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			}
+			.zoom {
+				position: absolute;
+				top: 0px;
+				bottom: 0px;
+				right: 0px;
+				left: 0px;
+				margin: auto;
+				background-image: url('../images/zoom.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				bacground-size: contain;
+				width: 34px;
+				height: 34px;
+			}
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			display: block;
+		}
+	}
+	&__overlay {
+		transition: $main_transition;
+	}
+}

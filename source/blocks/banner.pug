@@ -1,0 +1,31 @@
+section.banner#banner(style='background-image: url(' + require('./components/images/background-1.jpg') + ')')
+	.banner__overlay
+		.container
+			.banner__block
+				.slider.slick-banner
+					mixin slideBanner
+						div
+							ul.row.slick-banner__box
+								li.col-sm-6.banner__info.wow.fadeIn
+									h1
+										span Фасадные работы
+										br
+										| объектов гражданского 
+										br
+										| и промышленного назначения
+									p.
+										Наша компания всегда готова выполнить ремонт и энергомодернизацию фасада Вашего дома.  Качественное утепление фасада дома обеспечит Вам тепло и уют 
+								li.col-sm-6.banner__form.wow.fadeIn
+									form#order-form(data-title="Заявка на сайте", data-order-form)
+										h5 
+											| Расчет сметы и замеры -
+											span Бесплатно
+										.form-group
+											input.form-control#name(type='text', name='name', placeholder='Имя', required='required', data-is-included='true', data-title='Имя')
+											input.form-control#tel(type='text', name='tel', placeholder='Телефон', required='required', data-is-included='true', data-title='Телефон')
+											input.form-control#email(type='email', name='email', placeholder='E-mail', required='required', data-is-included='true', data-title='E-mail')
+										button(type='submit').btn Отправить
+										p.
+											Введите ваши  контактные данные и наш специалист свяжется с Вами
+					+slideBanner
+					//- +slideBanner

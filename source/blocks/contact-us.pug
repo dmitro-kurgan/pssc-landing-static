@@ -1,0 +1,27 @@
+section.contact-us#contact-us(style='background-image: url(' + require("../components/images/background-4.jpg") + ')')
+	.contact-us__overlay
+		.container
+			ul.row.contact-us__block
+				li.col-sm-6.contact-us__info.wow.fadeIn
+					p.
+						Выезд на объект специалиста, получение консультации, составление смет.
+					p.
+						Свяжитесь с нами и мы с удовольствием поможем Вам в решении Ваших вопросов
+					//- p
+					//- 	i Бесплатная
+					//- 	| консультация с инженерным экспертом поможет вам принять
+					//- 	span объективное решение
+				li.col-sm-6.contact-us__form.wow.flipInY
+					form#order-form2(data-title="Заявка на сайте", data-order-form)
+						h5 
+							| Расчет сметы и замеры -
+							span Бесплатно
+						.form-group
+							input.form-control#name2(type='text', name='name', placeholder='Имя', required='required', data-is-included='true', data-title='Имя')
+							input.form-control#tel2(type='text', name='tel', placeholder='Телефон', required='required', data-is-included='true', data-title='Телефон')
+							input.form-control#email2(type='email', name='email', placeholder='E-mail', required='required', data-is-included='true', data-title='E-mail')
+						p.
+							Введите ваши  контактные данные и наш специалист свяжется с Вами
+						button(type='submit').btn Отправить
+
+

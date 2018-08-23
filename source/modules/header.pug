@@ -1,0 +1,34 @@
+header
+	.header#header
+		.container
+			ul.header__content
+				li.header__left
+					a(href="./").header__logo
+						span.header__logo-img
+						span.header__logo-name
+						p.
+							первая слобожанская строительная компания
+					.header__menu#navbar
+						.header__close#close
+							span.top
+							span.mid
+							span.bottom
+						ul.nav(role="tablist")
+							li.active
+								a(href="#banner") Главная
+							li
+								a(href="#services") Услуги
+							li
+								a(href="#projects") Наши работы
+							li
+								a(href="#footer") Контакты
+				li.header__right
+					ul.header__contacts
+						li г. Харьков, проспект Науки, 56
+						li
+							a(href="tel:+380504050910") +38 (050) 405-09-10
+					a(href="#footer").btn#call заказать звонок
+					.header__hamburger#hamburger
+						span.top
+						span.mid
+						span.bottom

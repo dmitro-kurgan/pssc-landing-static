@@ -1,0 +1,16 @@
+section.licenses#licenses(style='background-image: url(' + require("./components/images/wall.jpg") + ')')
+	.licenses__overlay
+		.container
+			.licenses__block
+				.main-title.wow.fadeIn
+					h2 Лицензии и Разрешения:
+				ul.row
+					mixin licensesBox(img, delay)
+						li.col-sm-4.wow.fadeIn(data-wow-delay= delay)
+							a(href=require("./components/images/sertificate-" + img + '.jpg'), data-fancybox='gallery', class='licenses__box')
+								.licenses__overlay
+								img(src=require("./components/images/sertificate-" + img + '.jpg'), alt="")
+								span.zoom
+					+licensesBox('1', '0.25s')
+					+licensesBox('2', '0.5s')
+					+licensesBox('3', '0.75s')

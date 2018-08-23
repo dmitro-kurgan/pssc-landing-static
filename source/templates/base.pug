@@ -1,0 +1,26 @@
+doctype html
+
+block variables
+
+html(lang="ru")
+	head
+		block title
+			title Фасадные работы - ПССК
+		meta(charset="UTF-8")
+		meta(name="description", content="Фасадные работы объектов гражданского и промышленного назначения")
+		meta(name="viewport", content="initial-scale=1.0, width=device-width, user-scalable=no")
+		link(rel="icon", href="./images/cropped-logo-300x300.png", sizes='32x32')
+		link(rel="icon", href="./images/cropped-logo-300x300.png", sizes='192x192')
+		link(rel="apple-touch-icon-precomposed", href="/favicons/cropped-logo-300x300.png", sizes='32x32')
+		link(rel='stylesheet', href='libs/jquery.form-sender/css/intlTelInput.css')
+	body(class='' + classBody, data-spy="scroll", data-target="#navbar", data-offset="50")
+		div(class='wrapper wrapper--' + classWrapper)
+			block header
+				include ../modules/header
+			.content
+				block main
+			block footer
+				include ../modules/footer
+				include ../modules/modals
+		block script
+	
